@@ -98,4 +98,5 @@ function Build {
     Pop-Location -Stack BuildTemp
 }
 
+Set-PSDebug -Trace 2
 Build
