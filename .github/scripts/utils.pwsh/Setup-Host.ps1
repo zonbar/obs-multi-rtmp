@@ -66,7 +66,8 @@ function Setup-Host {
                     UseBasicParsing = $true
                     ErrorAction = 'Stop'
                 }
-
+                
+                Log-Debug $_Uri
                 Invoke-WebRequest @Params
                 Log-Status "Downloaded ${_Label} for ${script:Target}."
             } else {
