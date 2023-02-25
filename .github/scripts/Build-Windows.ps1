@@ -33,7 +33,7 @@ function Build {
 
     $ScriptHome = $PSScriptRoot
     $ProjectRoot = Resolve-Path -Path "$PSScriptRoot/../.."
-    $BuildSpecFile = "${ProjectRoot}/buildspec.json"
+    $BuildSpecFile = "${ProjectRoot}/buildspec-win.json"
 
     $UtilityFunctions = Get-ChildItem -Path $PSScriptRoot/utils.pwsh/*.ps1 -Recurse
 
@@ -47,7 +47,7 @@ function Build {
     $ProductVersion = $BuildSpec.version
 
     $script:DepsVersion = ''
-    $script:QtVersion = '5'
+    $script:QtVersion = '6'
     $script:VisualStudioVersion = ''
     $script:PlatformSDK = '10.0.18363.657'
 
